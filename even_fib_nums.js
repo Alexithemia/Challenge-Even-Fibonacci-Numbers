@@ -9,12 +9,12 @@ function _sumFibs(maxFibValue) {
   var sum = 0;
   var a = 1, b = 0, temp;
 
-  while (b <= maxFibValue) {
+  while (a <= maxFibValue) {
     temp = a;
     a = a + b;
     b = temp;
-    if (b % 2 === 0 && b <= maxFibValue) {
-      sum += b;
+    if (a % 2 === 0) {
+      sum += a;
     }
   }
   return sum;
@@ -25,12 +25,12 @@ function _highestFibonacciNumber(maxFibValue) {
   var highest = 0;
   var a = 1, b = 0, temp;
 
-  while (b <= maxFibValue) {
+  while (a <= maxFibValue) {
     temp = a;
     a = a + b;
     b = temp;
-    if (b <= maxFibValue) {
-      highest = b;
+    if (a <= maxFibValue) {
+      highest = a;
     }
   }
   return highest;
